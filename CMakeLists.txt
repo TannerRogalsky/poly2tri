@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(Poly2Tri)
+project(poly2tri)
 enable_language(CXX)
 
 set(SOURCE_FILES poly2tri/common/shapes.cc
@@ -10,4 +10,4 @@ set(SOURCE_FILES poly2tri/common/shapes.cc
 
 include_directories(${CMAKE_SOURCE_DIR}/poly2tri)
 
-add_library(Poly2Tri SHARED ${SOURCE_FILES})
+add_library(poly2tri STATIC ${SOURCE_FILES})
