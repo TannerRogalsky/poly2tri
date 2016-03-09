@@ -10,4 +10,4 @@ set(SOURCE_FILES poly2tri/common/shapes.cc
 
 include_directories(${CMAKE_SOURCE_DIR}/poly2tri)
 
-add_library(poly2tri STATIC ${SOURCE_FILES})
+add_library(poly2tri SHARED ${SOURCE_FILES})
