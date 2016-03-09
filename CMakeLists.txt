@@ -10,4 +10,8 @@ set(SOURCE_FILES poly2tri/common/shapes.cc
 
 include_directories(${CMAKE_SOURCE_DIR}/poly2tri)
 
-add_library(poly2tri STATIC ${SOURCE_FILES})
+if (WIN32)
+  add_library(poly2tri STATIC ${SOURCE_FILES}) # Not sure why Windows needs a static lib for this
+else ()
+  add_library(poly2tri SHARED ${SOURCE_FILES})
+endif ()
